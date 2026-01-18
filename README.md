@@ -37,4 +37,5 @@ The project focuses on a clean UI, responsive design, and interactive functional
 This project was created to practice front-end development concepts, especially **Tailwind CSS styling** and **JavaScript DOM manipulation**, including real-time validation and user interaction.
 
 ---
+Live link:https://pjaravinth.github.io/Comment_section/
 
