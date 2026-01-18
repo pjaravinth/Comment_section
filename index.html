@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Opinion</title>
+    <link href="./src/output.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-rose-300">
+    <div class="flex flex-col items-center w-full justify-center h-screen gap-10">
+        <div>
+            <h1 class="text-4xl font-bold">Feel Free To Ask</h1>
+        </div>
+        <div class="w-[80%] md:w-[40%] lg:w-[25%] xl:w-[25%]">
+            <textarea id="story"  oninput="updat(this)" class="w-full h-80  border-2 p-2 bg-white"></textarea>
+        </div>
+        <div>
+            <span id="fan">0</span>/200 characters
+        </div>
+
+    </div>
+
+</body>
+<script>
+let fan=document.getElementById("fan");
+let tx=document.getElementById("story");
+function updat(a){
+    
+    fan.textContent=a.value.length;
+    
+}
+ story.addEventListener("input", () => {
+    
+  });
+  story.addEventListener("keydown", (e)=>{
+
+    const allowedKeys = [
+      "Backspace",
+      "Delete",
+      "ArrowLeft",
+      "ArrowRight",
+      "ArrowUp",
+      "ArrowDown",
+      "Home",
+      "End",
+      "Tab"
+    ];
+
+    if(fan.textContent>=200 && !allowedKeys.includes(e.key)){
+        e.preventDefault();
+    alert("Maximum length is 200 character")
+}
+  })
+
+
+</script>
+
+</html>
